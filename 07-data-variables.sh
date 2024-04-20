@@ -5,4 +5,4 @@ B=$2
 
 SUM=($A+$B)
 
-Echo "Total Value:$SUM
+Echo "Total Value:$SUM"
