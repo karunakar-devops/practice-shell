@@ -2,4 +2,10 @@
 
 echo "Please enter username:"
 
-echo Please enter password:"
+read USERNAME
+
+echo "Please enter password:"
+
+read PASSWORD
+
+echo "username: $USERNAME and password: $PASSWORD
