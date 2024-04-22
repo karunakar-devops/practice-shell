@@ -7,6 +7,7 @@
         echo "running with root user"
     else 
         echo "please run with super user"
+        exit 1
         
     fi
 
@@ -27,6 +28,7 @@
         echo "Installation of git....success"
     else
         echo "Installation of git....failure"
+        exit 1
     fi
 
      
