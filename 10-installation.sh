@@ -7,6 +7,6 @@ then
     echo "please run with root access"
 else
     echo "you are root user"
-
+fi
 
 
