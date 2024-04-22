@@ -14,7 +14,7 @@
     fi
 
     Validate(){
-     if [ $? -ne 0 ]
+     if [ $1 -ne 0 ]
      then
      echo "$2----failure"
      exit 1
@@ -25,7 +25,7 @@
   
 
     dnf install nginx -y &>>$LOGFILE
-    Validate $1 "Installaion of nginx"
+    Validate $? "Installaion of nginx"
 
     dnf install tree -y &>>$LOGFILE
-    Validate $1 "Installaion of tree"
+    Validate $? "Installaion of tree"
