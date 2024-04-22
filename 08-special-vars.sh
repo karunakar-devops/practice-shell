@@ -9,4 +9,4 @@ echo "Exit ststus of last command:$?"
 echo "which user running this script:$USER"
 echo "process id of the current shell script:$$"
 Sleep 60&
-echo "process Id of last background command:$!"
+echo "process Id of last background command:$!"r
