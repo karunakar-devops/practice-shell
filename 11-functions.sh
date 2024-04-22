@@ -24,8 +24,8 @@
     }
   
 
-    dnf install mysql -y &>> $LOGFILE
-    Validate $1 "Installaion of Mysql"
+    dnf install nginx -y &>> $LOGFILE
+    Validate $1 "Installaion of nginx"
 
-    dnf install git -y &>> $LOGFILE
-    Validate $1 "Installaion of git"
+    dnf install tree -y &>> $LOGFILE
+    Validate $1 "Installaion of tree"
