@@ -18,7 +18,7 @@
         echo "Installation of mysql....failure"
     fi
 
-    dnf install git -y
+   
 
     if [ $? -eq 0 ]
     then
@@ -26,6 +26,8 @@
     else
         echo "Installation of git....success"
     fi
+
+     dnf install git -y
 
 
 
