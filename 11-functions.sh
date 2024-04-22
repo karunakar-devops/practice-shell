@@ -3,7 +3,7 @@
     USERID=$(id -u)
 
     Validate(){
-     if [ $? -ne 0]
+     if [ $1 -ne 0]
      then
      echo "$2 ---- failure"
      exit 1
@@ -12,7 +12,7 @@
     fi
     }
 
-    if[ $? -ne 0 ]
+    if[ $USERID -ne 0 ]
     then
     echo "please run with root access"
     exit 1
@@ -21,7 +21,7 @@
     fi
 
     dnf install mysql -y 
-    Validate $1 Installaion of Mysql
+    Validate $? Installaion of Mysql
 
     dnf insatll git -y 
-    Validate $1 Installaion of git
+    Validate $? Installaion of git
