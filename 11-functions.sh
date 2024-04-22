@@ -8,7 +8,7 @@
     if [ $USERID -ne 0 ]
     then
     echo "please run with root access"
-    exit 1
+    #exit 1
     else 
     echo "running with super user"
     fi
