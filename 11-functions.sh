@@ -1,6 +1,17 @@
 #!/bin/bash
 
     USERID=$(id -u)
+    TIMESTAMP=$(date +%F-%H-%M-%S)
+    SCRIPT-NAME=$(echo $0 | cut -d "." f1)
+    LOGFILE=$(/tmp/SCRIPT-NAME-TIMESTAMP.log)
+
+    if [ $USERID -ne 0 ]
+    then
+    echo "please run with root access"
+    exit 1
+    else 
+    echo "running with super user"
+    fi
 
     Validate(){
      if [ $1 -ne 0 ]
@@ -11,17 +22,10 @@
      echo "$2---- Success"
     fi
     }
+  
 
-    if [ $USERID -ne 0 ]
-    then
-    echo "please run with root access"
-    exit 1
-    else 
-    echo "running with super user"
-    fi
+    dnf install mysql -y &>>LOGFILE
+    Validate $? "Installaion of Mysql"
 
-    dnf install mysql -y 
-    Validate $? Installaion of Mysql
-
-    dnf insatll git -y 
-    Validate $? Installaion of git
+    dnf install git -y &>LOGFILE
+    Validate $? "Installaion of git"
