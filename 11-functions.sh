@@ -24,8 +24,8 @@
     }
   
 
-    dnf installl mysql -y &>> $LOGFILE
-    Validate $? "Installaion of Mysql"
+    dnf install mysql -y &>> $LOGFILE
+    Validate $1 "Installaion of Mysql"
 
-    dnf installl git -y &>> $LOGFILE
-    Validate $? "Installaion of git"
+    dnf install git -y &>> $LOGFILE
+    Validate $1 "Installaion of git"
