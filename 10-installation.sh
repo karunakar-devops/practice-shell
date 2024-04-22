@@ -7,6 +7,7 @@
         echo "running with root user"
     else 
         echo "please run with super user"
+        
     fi
 
     dnf install mysql -y
@@ -16,18 +17,19 @@
         echo "Installation of mysql....success"
     else
         echo "Installation of mysql....failure"
+        exit 1
     fi
 
-   
+   dnf install git -y
 
     if [ $? -eq 0 ]
     then
         echo "Installation of git....success"
     else
-        echo "Installation of git....success"
+        echo "Installation of git....failure"
     fi
 
-     dnf install git -y
+     
 
 
 
