@@ -2,8 +2,8 @@
 
     USERID=$(id -u)
     TIMESTAMP=$(date +%F-%H-%M-%S)
-    SCRIPT-NAME=$(echo $0 | cut -d "." f1)
-    LOGFILE=$(/tmp/SCRIPT-NAME-TIMESTAMP.log)
+    SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+    LOGFILE=$(/tmp/$SCRIPT_NAME-$TIMESTAMP.log)
 
     if [ $USERID -ne 0 ]
     then
@@ -24,8 +24,8 @@
     }
   
 
-    dnf install mysql -y &>>LOGFILE
+    dnf install mysql -y &>> $LOGFILE
     Validate $? "Installaion of Mysql"
 
-    dnf install git -y &>LOGFILE
+    dnf install git -y &>> $LOGFILE
     Validate $? "Installaion of git"
