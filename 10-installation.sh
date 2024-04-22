@@ -11,5 +11,22 @@
 
     dnf install mysql -y
 
+    if [ $? -eq 0 ]
+    then
+        echo "Installation of mysql....success"
+    else
+        echo "Installation of mysql....failure"
+    fi
+
+    dnf install git -y
+
+    if [ $? -eq 0 ]
+    then
+        echo "Installation of git....success"
+    else
+        echo "Installation of git....success"
+    fi
+
+
 
 
