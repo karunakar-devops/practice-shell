@@ -16,10 +16,10 @@
     Validate(){
      if [ $? -ne 0 ]
      then
-     echo "$2 ---- failure"
+     echo $2 ----failure
      exit 1
      else
-     echo "$2---- Success"
+     echo $2----Success
     fi
     }
   
