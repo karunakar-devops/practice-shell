@@ -4,12 +4,12 @@
 
     if [ $USERID -e 0 ]
     then 
-    echo "running with root user"
-
+        echo "running with root user"
     else 
-    echo "please run with super user"
-    if
-dnf install mysql -y
+        echo "please run with super user"
+    fi
+
+    dnf install mysql -y
 
 
 
