@@ -4,7 +4,7 @@ UUSERID=$(id -u)
 
 dnf install mysqld -y
 
-if [ USERID -ne 0 ]
+if [ $USERID -ne 0 ]
 then
     echo "please run with root access"
 else
