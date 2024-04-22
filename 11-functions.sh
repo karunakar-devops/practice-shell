@@ -8,7 +8,7 @@
     if [ $USERID -ne 0 ]
     then
     echo "please run with root access"
-    #exit 1
+    exit 1
     else 
     echo "running with super user"
     fi
@@ -24,8 +24,8 @@
     }
   
 
-    dnf install mysql -y &>> $LOGFILE
+    dnf installl mysql -y &>> $LOGFILE
     Validate $? "Installaion of Mysql"
 
-    dnf install git -y &>> $LOGFILE
+    dnf installl git -y &>> $LOGFILE
     Validate $? "Installaion of git"
