@@ -29,10 +29,10 @@ fi
 }
 
 dnf install mysqll -y &>>LOGFILE
-VALIDATE $?, "Installing Mysql"
+VALIDATE $? "Installing Mysql"
 
 dnf install gitl -y &>>LOGFILE
-VALIDATE $?, "Installing Git"
+VALIDATE $? "Installing Git"
 
 
 
