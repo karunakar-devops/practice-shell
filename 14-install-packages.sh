@@ -18,21 +18,21 @@ else
     echo "you are super user"
 fi
 
-#  VALIDATE(){
-# if [ $1 -ne 0 ]
-# then
-#     echo -e "$2..... $R failure $N"
-#     exit 1
-# else
-#     echo -e "$2..... $G success $N"
-# fi
-# }
+VALIDATE(){
+if [ $1 -ne 0 ]
+ then
+     echo -e "$2..... $R failure $N"
+     exit 1
+ else
+     echo -e "$2..... $G success $N"
+ fi
+ }
 
 for i in $@
 do
 echo "package to install :$i"
 dnf list installed $i &>>$LOGFILE
-if [ $1 -eq 0 ]
+if [ $? -eq 0 ]
 then
     echo -e "$i already installed......$Y SKIPPING $N"
 else 
