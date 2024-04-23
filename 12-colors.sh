@@ -8,6 +8,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+N="\e[0m"
 
 
 if [ $USERID -ne 0 ]
@@ -21,17 +22,17 @@ fi
 VALIDATE(){
 if [ $1 -ne 0 ]
 then
-    echo -e  "$2..... $R failure" $N
+    echo -e  "$2..... $R failure $N" 
     exit 12
 else
-    echo -e "$2.... $G success" $N
+    echo -e "$2.... $G success $N" 
 fi
 }
 
-dnf install mysql -y &>>LOGFILE
+dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing Mysql"
 
-dnf install gitl -y &>>LOGFILE
+dnf install gitl -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
 
 
