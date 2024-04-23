@@ -28,7 +28,7 @@ else
 fi
 }
 
-dnf install mysqll -y &>>LOGFILE
+dnf install mysql -y &>>LOGFILE
 VALIDATE $? "Installing Mysql"
 
 dnf install gitl -y &>>LOGFILE
