@@ -25,7 +25,7 @@ then
     exit 12
 else
     echo -e $G"$2....success $N"
-
+fi
 }
 
 dnf install mysql -y &>>LOGFILE
