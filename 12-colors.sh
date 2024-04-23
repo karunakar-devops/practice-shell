@@ -19,19 +19,19 @@ else
 fi
 
 VALIDATE(){
-if [ $1 -ne 0]
+if [ $1 -ne 0 ]
 then
-    echo -e $R "$2.....failure $N"
+    echo -e  "$2..... $R failure $N"
     exit 12
 else
-    echo -e $G"$2....success $N"
+    echo -e "$2.... $G success $N"
 fi
 }
 
-dnf install mysql -y &>>LOGFILE
+dnf install mysqll -y &>>LOGFILE
 VALIDATE $?, "Installing Mysql"
 
-dnf install git -y &>>LOGFILE
+dnf install gitl -y &>>LOGFILE
 VALIDATE $?, "Installing Git"
 
 
