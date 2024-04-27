@@ -2,11 +2,11 @@
 
 set -e 
 
-error-handling(){
-    echo "error at line no:$1 msg:$2"
+Error-handling(){
+    echo "error at line no :$1 msg:$2"
 }
 
-trap 'error-handling ${LINENO} "${BASH-COMMAND}"' ERR
+trap 'Error-handling ${LINENO} "${BASH-COMMAND}"' ERR
 
 USERID=$(id -u)
 
