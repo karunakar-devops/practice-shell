@@ -18,7 +18,7 @@ else
     echo "You are super user"
 fi
 
-dnf install mysql-server -y 
+dnf install mysqlwww-server -y 
 
 dnf install tree -y
 
