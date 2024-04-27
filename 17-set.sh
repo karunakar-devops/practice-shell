@@ -6,7 +6,7 @@ Error_handling(){
     echo "error at line no :$1 msg:$2"
 }
 
-trap 'Error_handling ${LINENO} "$BASH_COMMAND"' ERR
+trap 'Error_handling ${LINENO} "${BASH_COMMAND}"' ERR
 
 USERID=$(id -u)
 
