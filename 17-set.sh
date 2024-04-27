@@ -6,7 +6,7 @@ Error_handling(){
     echo "error at line no :$1 msg:$2"
 }
 
-trap 'Error_handling ${LINENO} "${BASH-COMMAND}"' ERR
+trap 'Error_handling ${LINENO} "$BASH-COMMAND"' ERR
 
 USERID=$(id -u)
 
@@ -18,7 +18,7 @@ else
     echo "You are super user"
 fi
 
-dnf install mysqleee-server -y 
+dnf install mysql-server -y 
 
 dnf install tree -y
 
