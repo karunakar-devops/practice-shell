@@ -2,6 +2,12 @@
 
 set -e 
 
+error-handling(){
+    echo "error at line no:$1 msg:$2"
+}
+
+trap 'error-handling ${LINENO} "${BASH-COMMAND}"' ERR
+
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
